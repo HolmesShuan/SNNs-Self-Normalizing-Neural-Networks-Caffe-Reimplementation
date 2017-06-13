@@ -42,7 +42,6 @@ void SeLuLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
     const Dtype* top_diff = top[0]->gpu_diff();
     Dtype* bottom_diff = bottom[0]->mutable_gpu_diff();
     const int count = bottom[0]->count();
-    Dtype negative_slope = this->layer_param_.ng_param().negative_slope();
     // NOLINT_NEXT_LINE(whitespace/operators)
     SeLUBackward<Dtype><<<CAFFE_GET_BLOCKS(count), CAFFE_CUDA_NUM_THREADS>>>(
         count, top_diff, bottom_data, bottom_diff, alpha, lambda);
