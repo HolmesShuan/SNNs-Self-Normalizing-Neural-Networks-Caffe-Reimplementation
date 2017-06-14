@@ -1,4 +1,4 @@
-# Implement-Self-Normalizing-Neural-Networks-Caffe-Reimplementation
+# SNNs-Self-Normalizing-Neural-Networks-Caffe-Reimplementation
 Personal Caffe reimplementation of SNNs([arXiv pre-print Link](https://arxiv.org/abs/1706.02515)).
 
 ## SeLu Layer
@@ -32,7 +32,7 @@ layer {
   name: "SNNDropoutlayer"
   type: "SeLuDropout"
   bottom: "conv"
-  top: "seludropout"
+  top: "conv"
   selu_dropout_param {
     alpha : xxxxx # default -1.75809934
     dropout_ratio : xxxxx # default 0.1
