@@ -65,14 +65,4 @@ message SeLuDropoutParameter {
   optional float alpha = 2 [default = -1.75809934];
 }
 ...
-# EDIT (omissible)
-message V1LayerParameter {
-...
-SPLIT = 22;
-SLICE = 33;
-SELU = 53; # HERE !!
-SELU_DROPOUT = 54; # HERE !!
-TANH = 23;
-...
-}
 ```
