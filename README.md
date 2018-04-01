@@ -2,18 +2,21 @@
 Caffe reimplementation of SNNs([arXiv pre-print Link](https://arxiv.org/abs/1706.02515)).
 
 ## SeLu Layer
-*if x>0*  <br>
-  *`selu(x) = lambda*x `*  <br>
-*else*  <br>
-  *`selu(x) = lambda*alpha*(exp(x)-1) `* <br>
-<br>
-## SeLu Dropout Layer
-**dropout_ratio = 1 - q** <br>
-*if random > dropout_ratio* <br>
-*`selu_drop(x) = a*(x)+b`* <br>
-*else*<br>
-*`selu_drop(x) = a*(alpha)+b`*
+```python
+if x>0:
+    selu(x) = lambda*x
+else:
+    selu(x) = lambda*alpha*(exp(x)-1)
+```
 
+## SeLu Dropout Layer
+```python
+dropout_ratio = 1 - q
+if random > dropout_ratio:
+    selu_drop(x) = a*(x)+b
+else:
+    selu_drop(x) = a*(alpha)+b
+```
 ## How to use?
 **.prototxt**
 ```
