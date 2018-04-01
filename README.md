@@ -1,5 +1,5 @@
 # SNNs-Self-Normalizing-Neural-Networks-Caffe-Reimplementation
-Personal Caffe reimplementation of SNNs([arXiv pre-print Link](https://arxiv.org/abs/1706.02515)).
+Caffe reimplementation of SNNs([arXiv pre-print Link](https://arxiv.org/abs/1706.02515)).
 
 ## SeLu Layer
 *if x>0*  <br>
